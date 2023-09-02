@@ -87,5 +87,6 @@ void	starend(char **dest, const char *src);
 int		close_frame_two(void *param);
 void	readmapp(t_win *pnc, char *path);
 int		free_map(void *param);
+void	player_location(int i, int j, void *param);
 
 #endif

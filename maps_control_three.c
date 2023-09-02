@@ -104,3 +104,17 @@ void	starend(char **dest, const char *src)
 		}
 	}
 }
+
+int	free_map(void *param)
+{
+	t_win	*pnc;
+	int		i;
+
+	pnc = param;
+	i = 0;
+	while (pnc->map->mappin[i])
+		free(pnc->map->mappin[i++]);
+	free(pnc->map->mappin);
+	free(pnc->map);
+	return (1);
+}

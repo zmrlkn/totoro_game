@@ -87,17 +87,3 @@ void	readmapp(t_win *pnc, char *path)
 {
 	pnc->map = read_map(path);
 }
-
-int free_map(void *param)
-{
-	t_win	*pnc;
-	int		i;
-
-	pnc = param;
-	i = 0;
-	while (pnc->map->mappin[i])
-		free(pnc->map->mappin[i++]);
-	free(pnc->map->mappin);
-	free(pnc->map);
-	return(1);
-}
